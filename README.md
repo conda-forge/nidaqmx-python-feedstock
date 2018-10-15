@@ -19,9 +19,9 @@ as a complex, highly object-oriented wrapper around the NI-DAQmx C API using
 Current build status
 ====================
 
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/nidaqmx-python-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/nidaqmx-python-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/nidaqmx-python-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/nidaqmx-python-feedstock)
 [![Windows](https://img.shields.io/appveyor/ci/conda-forge/nidaqmx-python-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/nidaqmx-python-feedstock/branch/master)
-![Linux disabled](https://img.shields.io/badge/linux-disabled-lightgrey.svg)
-![OSX disabled](https://img.shields.io/badge/OSX-disabled-lightgrey.svg)
 
 Current release info
 ====================
