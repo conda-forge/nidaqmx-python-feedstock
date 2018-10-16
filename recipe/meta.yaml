@@ -1,4 +1,4 @@
-{% set name = "nidaqmx-python" %}
+{% set name = "nidaqmx" %}
 {% set version = "0.5.7" %}
 
 package:
@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/ni/{{ name }}/archive/{{ version }}.tar.gz
+  url: https://github.com/ni/nidaqmx-python/archive/{{ version }}.tar.gz
   sha256: f3d3df29ccfbb4f278648f101efde475f66a0c306fde918c06679dd323574f5b
 
 build:
-  number: 1
+  number: 1001
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
@@ -45,3 +45,4 @@ about:
 extra:
   recipe-maintainers:
     - carlodri
+    - lstebel
