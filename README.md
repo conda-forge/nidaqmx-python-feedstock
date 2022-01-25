@@ -1,13 +1,17 @@
-About nidaqmx
-=============
+About nidaqmx-python
+====================
 
 Home: https://github.com/ni/nidaqmx-python
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nidaqmx-python-feedstock/blob/master/LICENSE.txt)
 
 Summary: Python API for interacting with NI-DAQmx
+
+Development: https://github.com/ni/nidaqmx-python
+
+Documentation: http://nidaqmx-python.readthedocs.io/en/latest/
 
 The nidaqmx package contains an API (Application Programming Interface) for
 interacting with the NI-DAQmx driver. The package is implemented in Python.
@@ -34,34 +38,36 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-nidaqmx-green.svg)](https://anaconda.org/conda-forge/nidaqmx) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/nidaqmx.svg)](https://anaconda.org/conda-forge/nidaqmx) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/nidaqmx.svg)](https://anaconda.org/conda-forge/nidaqmx) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/nidaqmx.svg)](https://anaconda.org/conda-forge/nidaqmx) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-nidaqmx--python-green.svg)](https://anaconda.org/conda-forge/nidaqmx-python) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/nidaqmx-python.svg)](https://anaconda.org/conda-forge/nidaqmx-python) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/nidaqmx-python.svg)](https://anaconda.org/conda-forge/nidaqmx-python) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/nidaqmx-python.svg)](https://anaconda.org/conda-forge/nidaqmx-python) |
 
-Installing nidaqmx
-==================
+Installing nidaqmx-python
+=========================
 
-Installing `nidaqmx` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `nidaqmx-python` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `nidaqmx` can be installed with:
+Once the `conda-forge` channel has been enabled, `nidaqmx-python` can be installed with:
 
 ```
-conda install nidaqmx
+conda install nidaqmx-python
 ```
 
-It is possible to list all of the versions of `nidaqmx` available on your platform with:
+It is possible to list all of the versions of `nidaqmx-python` available on your platform with:
 
 ```
-conda search nidaqmx --channel conda-forge
+conda search nidaqmx-python --channel conda-forge
 ```
 
 
 About conda-forge
 =================
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+[![Powered by
+NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -72,7 +78,7 @@ A feedstock is made up of a conda recipe (the instructions on what and how to bu
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.org/) it is possible to build and upload installable
+and [TravisCI](https://travis-ci.com/) it is possible to build and upload installable
 packages to the [conda-forge](https://anaconda.org/conda-forge)
 [Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
 
@@ -96,26 +102,26 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating nidaqmx-feedstock
-==========================
+Updating nidaqmx-python-feedstock
+=================================
 
-If you would like to improve the nidaqmx recipe or build a new
+If you would like to improve the nidaqmx-python recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/nidaqmx-feedstock are
+Note that all branches in the conda-forge/nidaqmx-python-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
