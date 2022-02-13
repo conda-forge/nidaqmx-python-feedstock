@@ -1,5 +1,5 @@
 {% set name = "nidaqmx-python" %}
-{% set version = "0.5.7" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,17 +7,18 @@ package:
 
 source:
   url: https://github.com/ni/nidaqmx-python/archive/{{ version }}.tar.gz
-  sha256: f3d3df29ccfbb4f278648f101efde475f66a0c306fde918c06679dd323574f5b
+  sha256: e68c6cf0180fdd413a1ed43b278a2539cfb01f270ea6ad43c25a71dddc01cf54
 
 build:
   noarch: python
-  number: 3
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - python >=3
     - pip
+    - poetry >=1.1.12
   run:
     - python >=3
     - numpy
@@ -32,7 +33,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Python API for interacting with NI-DAQmx'
+  summary: Python API for interacting with NI-DAQmx
   description: |
     The nidaqmx package contains an API (Application Programming Interface) for
     interacting with the NI-DAQmx driver. The package is implemented in Python.
