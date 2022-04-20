@@ -1,5 +1,5 @@
 {% set name = "nidaqmx-python" %}
-{% set version = "0.6.1" %}
+{% set version = "0.6.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ni/nidaqmx-python/archive/{{ version }}.tar.gz
-  sha256: 55290c8cefd4f3d87d24b10c0a4abbe44d7f6ce2139cc76f963a6b01681b2170
+  sha256: c89314f8607eb2f558e0f630fdb6ba1a2479249aca30ad3fe024700342400b4c
 
 build:
   noarch: python
