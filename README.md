@@ -1,11 +1,11 @@
-About nidaqmx-python
-====================
+About nidaqmx-python-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nidaqmx-python-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/ni/nidaqmx-python
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nidaqmx-python-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python API for interacting with NI-DAQmx
 
