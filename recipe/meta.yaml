@@ -23,6 +23,7 @@ requirements:
     - python >=3.8, <4.0
     - numpy >=1.22, <2.0
     - six
+    - deprecation >=2.1
 
 test:
   imports:
