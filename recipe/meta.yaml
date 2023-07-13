@@ -1,5 +1,5 @@
 {% set name = "nidaqmx-python" %}
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ni/nidaqmx-python/archive/{{ version }}.tar.gz
-  sha256: a7f2304231817bcb84d8d63d623f4d424b0c6c10740adb37e56266ed1e3e2c3e
+  sha256: 309d0cf0f061b20c17157ae8e57b35544c1efdc5006115a0b1c7abbd13aa66bf
 
 build:
   noarch: python
@@ -18,11 +18,10 @@ requirements:
   host:
     - python >=3.8, <4.0
     - pip
-    - poetry >=1.1.12
+    - poetry >=1.2
   run:
     - python >=3.8, <4.0
     - numpy >=1.22, <2.0
-    - six
     - deprecation >=2.1
 
 test:
