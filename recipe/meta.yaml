@@ -18,6 +18,7 @@ requirements:
   host:
     - python >=3.8, <4.0
     - pip
+    - setuptools
     - poetry >=1.2
   run:
     - python >=3.8, <4.0
