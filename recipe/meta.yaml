@@ -11,21 +11,23 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.8, <4.0
+    - python {{ python_min }}
     - pip
     - setuptools
     - poetry >=1.2
   run:
-    - python >=3.8, <4.0
+    - python >={{ python_min }},<4.0
     - numpy >=1.22, <2.0
     - deprecation >=2.1
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - nidaqmx
 
