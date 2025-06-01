@@ -16,16 +16,18 @@ build:
 
 requirements:
   host:
-    - python >=3.8, <4.0
+    - python {{ python_min }}
     - pip
     - setuptools
     - poetry >=1.2
   run:
-    - python >=3.8, <4.0
+    - python >={{ python_min }}
     - numpy >=1.22, <2.0
     - deprecation >=2.1
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - nidaqmx
 
