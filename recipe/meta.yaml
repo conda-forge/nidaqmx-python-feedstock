@@ -21,8 +21,8 @@ requirements:
     - setuptools
     - poetry >=1.2
   run:
-    - python >={{ python_min }},<4.0
-    - numpy >=1.22, <2.0
+    - python >={{ python_min }}
+    - numpy ~=1.22
     - deprecation >=2.1
 
 test:
