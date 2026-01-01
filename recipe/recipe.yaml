@@ -1,40 +1,40 @@
-{% set name = "nidaqmx-python" %}
-{% set version = "1.2.0" %}
+schema_version: 1
+
+context:
+  name: nidaqmx-python
+  version: 1.2.0
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://github.com/ni/nidaqmx-python/archive/{{ version }}.tar.gz
+  url: https://github.com/ni/nidaqmx-python/archive/${{ version }}.tar.gz
   sha256: cf8d524ee19d23da0638c18898913c764c2dcd03e85ab0a7735b69bfa05fc702
 
 build:
+  number: 1
   noarch: python
-  number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: ${{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - setuptools
     - poetry >=1.2
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - numpy ~=1.22
     - deprecation >=2.1
 
-test:
-  requires:
-    - python {{ python_min }}
-  imports:
-    - nidaqmx
-
+tests:
+  - python:
+      imports:
+        - nidaqmx
+      python_version: ${{ python_min }}.*
 about:
-  home: https://github.com/ni/nidaqmx-python
   license: MIT
-  license_family: MIT
   license_file: LICENSE
   summary: Python API for interacting with NI-DAQmx
   description: |
@@ -42,9 +42,10 @@ about:
     interacting with the NI-DAQmx driver. The package is implemented in Python.
     This package was created and is supported by NI. The package is implemented
     as a complex, highly object-oriented wrapper around the NI-DAQmx C API using
-     the ctypes Python library.
-  doc_url: http://nidaqmx-python.readthedocs.io/en/latest/
-  dev_url: https://github.com/ni/nidaqmx-python
+    the ctypes Python library.
+  homepage: https://github.com/ni/nidaqmx-python
+  repository: https://github.com/ni/nidaqmx-python
+  documentation: http://nidaqmx-python.readthedocs.io/en/latest/
 
 extra:
   recipe-maintainers:
