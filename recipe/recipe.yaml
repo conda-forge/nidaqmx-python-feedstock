@@ -9,8 +9,8 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://github.com/ni/nidaqmx-python/archive/${{ version }}.tar.gz
-  sha256: cf8d524ee19d23da0638c18898913c764c2dcd03e85ab0a7735b69bfa05fc702
+  url: https://pypi.org/packages/source/n/nidaqmx/nidaqmx-${{ version }}.tar.gz
+  sha256: faeea9889a2dae03b7e23f525a44889264a5cfbf5590558e3792c28871620c87
 
 build:
   number: 1
@@ -21,12 +21,18 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - setuptools
-    - poetry >=1.2
+    - poetry-core >=1.8,<2.0
   run:
     - python >=${{ python_min }}
-    - numpy ~=1.22
+    - click >=8.0.0
     - deprecation >=2.1
+    - distro >=1.9.0
+    - hightime >=0.2.2
+    - numpy >=2.1 # python_version >= "3.13" and python_version < "4.0"
+    - python-decouple >=3.8
+    - requests >=2.25.0
+    - typing_extensions >=4.0.0
+    - tzlocal <6.0,>=5.0
 
 tests:
   - python:
