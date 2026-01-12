@@ -156,6 +156,3 @@ Feedstock Maintainers
 * [@carlodri](https://github.com/carlodri/)
 * [@lstebel](https://github.com/lstebel/)
 
-
-<!-- dummy commit to enable rerendering -->
-

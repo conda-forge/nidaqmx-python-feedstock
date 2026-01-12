@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: nidaqmx-python
-  version: 1.2.0
+  version: "1.4.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/n/nidaqmx/nidaqmx-${{ version }}.tar.gz
-  sha256: faeea9889a2dae03b7e23f525a44889264a5cfbf5590558e3792c28871620c87
+  sha256: 29e3d2584d4976bce28c71861dc2fcfc76d0ece702fdccf0c7914b4f90976f42
 
 build:
   number: 1
