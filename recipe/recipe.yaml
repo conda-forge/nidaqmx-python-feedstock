@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: nidaqmx-python
-  version: 1.2.0
+  version: "1.4.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/n/nidaqmx/nidaqmx-${{ version }}.tar.gz
-  sha256: faeea9889a2dae03b7e23f525a44889264a5cfbf5590558e3792c28871620c87
+  sha256: 29e3d2584d4976bce28c71861dc2fcfc76d0ece702fdccf0c7914b4f90976f42
 
 build:
   number: 1
@@ -21,7 +21,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - poetry-core >=1.8,<2.0
+    - poetry-core >=2.1,<3.0
   run:
     - python >=${{ python_min }}
     - click >=8.0.0
@@ -32,6 +32,7 @@ requirements:
     - python-decouple >=3.8
     - requests >=2.25.0
     - typing_extensions >=4.0.0
+    - nitypes >=1.0.1
     - tzlocal <6.0,>=5.0
 
 tests:
